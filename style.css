@@ -1,0 +1,419 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	text-decoration: none;
+	scroll-behavior: smooth;
+}
+
+nav
+{
+	width: 100%;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	z-index: 1;
+}
+
+.container
+{
+	max-width: 1200px; 
+	width: 100%;
+	/*padding: 10px;*/
+	/*background: red;*/
+	display: flex;
+	justify-content: space-between;
+}
+.red
+{
+	color: red;
+	font-size: 32px;
+	text-transform: uppercase;
+}
+
+.container h3 
+{
+		font-size: 32px;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: white;
+}
+.fa-bars{ color: white!important; font-size: 26px!important; }
+
+ #chk,.bar{ display: none; }
+
+.logo
+{
+	width: 50px;
+	height: 50px;
+	/*padding: 20px;*/
+	background-image: url(logo1.png);
+	background-position: top;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+ .ulist{ display: flex;  }
+ .ulist li
+	 { 
+	 	padding: 15px 15px;
+	 	margin: 0px 5px; 
+ 		transition: 0.7s;
+ 		list-style: none;
+        /*position: relative; */
+        border-radius: 10px; 
+    }
+ .ulist li:hover{ background: ghostwhite; }
+ .ulist li a{ color:red; font-weight: 600; }
+ /*---------------------------------------------------------*/
+
+#home
+{
+	width: 100%;
+	height: 100vh;
+	background: cyan;
+}
+.mainbox
+{
+	width: 100%;
+	height: 100vh;
+	background: yellow;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+ .box
+ {
+ 	width: 100%;
+ 	height: 100vh;
+ 	overflow: hidden;
+ 	/*border: 10px solid red;*/
+ }
+ .wrapper
+ {
+ 	width: 300%;
+ 	height: 100%;
+ 	/*padding: 10px;*/
+ 	/*border: 5px solid green;*/
+ 	/*background: blue;*/
+ 	display: flex;
+ 	animation: slide 9s infinite;
+ }
+ .wrapper img 
+ {
+ 	width: 100%;
+ 	height: 100%;
+ }
+ .blur
+ {
+ 	width: 100%;
+ 	height: 100%;
+ 	background: rgba(0, 0, 0, 0.8);
+ 	position: absolute;
+ 	
+ }
+ @keyframes slide
+ {
+ 	0%
+ 	{
+		transform: translate(0%);
+ 	}
+ 	50%{
+		transform: translate(-33.33%);
+ 	}
+ 	100%{
+		transform: translate(-66.66%);
+ 	}
+ }
+ 
+ .head
+ {
+ 	width: 600px;
+ 	padding: 20px;
+ 	/*background: green;*/
+ 	position: absolute;
+ 	color: white;
+ 	text-align: center;
+ 	word-spacing: 2px;
+ 	letter-spacing: 1.5px;
+ 	font-size: 28px;
+ }
+ .panel 
+{
+	padding: 5px;
+	max-width: 600px;
+	margin: 20px auto;
+	/*display: flex;*/
+	/*justify-content : center;*/
+	/*align-items: center;*/
+}
+
+.src 
+{
+	/*outline: none;*/
+	/*border: none;*/
+	padding: 12px 25px;
+	width: 350px;
+	margin: 0 15px;
+
+}
+/*-----------------------------------------------------------------------*/
+#language
+{
+	width: 100%;
+	padding: 40px;
+	/*background: olive;*/
+}
+
+
+.langhead 
+  {
+    width: 100%;
+    max-width: 1200px;
+    /*background: cyan;*/
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+  .langpart 
+  {
+    width: calc(50% - 10px);
+    padding: 10px;
+    /*background: green;*/
+  }
+
+  .langhead h1 
+  {
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .portlin3
+
+  {
+    width: 200px;
+    height: 5px;
+    background: black;
+    border-radius: 6px;
+    
+    margin-top: 30px;
+  }
+  .pr 
+  {
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    color: black;
+    font-family: sans-serif;
+    cursor: pointer;
+  }
+
+  .pcolor 
+  {
+    background: mediumseagreen;
+    border-radius: 3px;
+    color: white;
+    font-family: sans-serif;
+  }
+.langbox
+{
+	width: 100%;
+    max-width: 1200px;
+    /*background: pink;*/
+    margin: auto;
+    padding: 10px;
+    /*margin-top: 20px;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pgpart 
+  {
+    width: calc(33% - 10px);
+    padding: 10px;
+    /*background: lightblue;*/
+    margin: 5px;
+    position: relative;
+  }
+  .gimg 
+  {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+
+    .pgpart:before 
+  {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 1s;
+  }
+
+  .pgpart:hover::before 
+    {
+      opacity: 1;
+    }
+
+   /* .pgpart:after 
+  {
+    position: absolute;
+    content: 'Learn';
+    width: 100%;
+    height: 20%;
+    background: firebrick;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+    opacity: 0;
+    transition: 1s;
+  }
+  .pgpart:hover::after 
+  {
+    opacity: 1;
+  }*/
+  .click
+  {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: blue;
+    padding: 10px;
+    opacity: 0;
+    transition: 1s;
+  }
+  .click a 
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .learn
+  {
+    width: 150px;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 20px;
+  }
+  .pgpart:hover .click
+  {
+    opacity: 1;
+  }
+  .sog 
+  {
+    padding: 10px;
+    /*background: gray;*/
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 1s;
+  }
+  .sog h2
+  {
+    color: white;
+    font-size: 25px;
+    width: 250px;
+    padding: 10px;
+    
+  }
+
+  .pgpart:hover .sog 
+  {
+    opacity: 1;
+  }
+
+  /*----------------------------------------------------------------------*/
+  @media(max-width: 780px)
+  {
+    .bar{ display: block; }
+    .ulist{ position: fixed; top: 70px; background: rgba(0, 0, 0, 0.4); width: 100%; flex-direction: column; left: -100%; transition: 1s; }
+    .ulist li{ padding: 15px; text-align: center; }
+    #chk:checked ~ .ulist{ left: 0; }
+  }
+
+  @media (max-width: 950px)
+  {
+  	#language 
+    {
+      height: auto;
+    }
+    .langhead 
+    {
+      flex-direction: column;
+    } 
+    .langpart 
+    {
+      width: 100%;
+      text-align: center;
+      margin-top: 5px;
+    }
+    .pgpart 
+    {
+      width: calc(50% - 10px);
+    }
+    .portlin3
+    {
+      margin: auto;
+      margin-top: 20px;
+    }
+
+  }
+/*====================================================*/
+
+  @media (max-width: 600px)
+{
+
+   .portlin3
+    {
+      margin: auto;
+      margin-top: 20px;
+    }
+    .langhead 
+    {
+      flex-direction: column;
+    }
+    .langpart 
+    {
+      width: 100%;
+      text-align: center;
+      margin-top: 5px;
+    }
+    .pr 
+    {
+      padding: 10px;
+      font-size: 13px;
+    }
+    .pgpart 
+    {
+      width: 100%;
+    }
+     #language 
+    {
+      height: auto;
+    }
+
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="cplus.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section>
+	<div class="container">
+		<div class="small-part" id="side">
+			<div class="close" onclick="closeNav()">&times</div>
+			<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+			<ul id="myMenu">
+			  <li><a href="#">All Examples</a></li>
+			  <li><a href="#">Simple Programs</a></li>
+			  <li><a href="#">if-else</a></li>
+			  <li><a href="#">Switch-case</a></li>
+			  <li><a href="#">Loop Statements</a></li>
+			  <li><a href="#">Patterns</a></li>
+			  <li><a href="#">Array</a></li>
+			  <li><a href="#">Functions</a></li>
+			  <li><a href="#">Structure and Union</a></li>
+			  <li><a href="#">Class and Object</a></li>
+			  <li><a href="#">Constructor and Destructor</a></li>
+			  <li><a href="#">Inheritance</a></li>
+			  <li><a href="#">Polymorphism</a></li>
+			  <li><a href="#">Stack</a></li>
+			  <li><a href="#">Queue</a></li>
+			  <li><a href="#">Linked List</a></li>
+			</ul>
+		</div>
+		<div class="large-part">
+			<div class="c-head">
+
+				<button onclick="openNav()">
+          			<i class="fa fa-bars"></i>
+      			</button>
+				<h1> C++ Examples</h1>
+				<input type="text" id="all-search" onkeyup="allprogram()" placeholder="Search.." title="Type in a category">
+			</div><br>
+			<div class="c-text">
+				<div class="c-image"><img src="c1.jpg" class="img"></div>
+				<div class="text"></div>
+				<div class="content">
+					<p>C++ is an Object Oriented Programming Language. One of the best ways of learning C++ is by practicing various examples of it.<br><br> This page contains examples on the basic concepts of C++.</p>
+				</div>
+			</div>
+			<div class="popular">
+				<div class="cpart1"></div>
+				<div class="cpart2"></div>
+				<div class="base">
+					<h2>Popular Examples</h2>
+					<div class="division">
+						<div class="pop-ex">
+							<a href="1hello_world.html">
+								<div>
+									<p class="div-head">C++ Examples</p><br>
+									<p class="c-para">C++ Program to print "Hello World!"</p>
+								</div>
+							</a>
+						</div>
+						<div class="pop-ex">
+							<a href="#">
+								<div>
+									<p class="div-head">C++ Examples</p><br>
+									<p class="c-para">C++ Program to build a Simple Calculator</p>
+								</div>
+							</a>
+						</div>
+						<div class="pop-ex">
+							<a href="#">
+								<div>
+									<p class="div-head">C++ Examples</p><br>
+									<p class="c-para">C++ Program to print Fibonacci Series</p>
+								</div>
+							</a>
+						</div>
+						<div class="pop-ex">
+							<a href="#">
+								<div>
+									<p class="div-head">C++ Examples</p><br>
+									<p class="c-para">C++ Program to create Pyramids and Patterns</p>
+								</div>
+							</a>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+			<h2 style="padding: 20px 0 0 10px;">All Examples</h2>
+			<ul id="myProgram">
+				<li><a href="cplus_prog/1hello_world.html"><div class="number">1</div><span>C++ Program to Print "Hello World!"</span></a></li>
+				<li><a href="#"><div class="number">2</div><span>C++ Program to Print Name entered by user.</span></a></li>
+				<li><a href="#"><div class="number">3</div><span>C++ Program to Print Sum of two Numbers.</span></a></li>
+				<li><a href="#"><div class="number">4</div><span>C++ Program to Print Average of two Numbers.</span></a></li>
+				<li><a href="#"><div class="number">5</div><span>C++ Program to Swap two Numbers.</span></a></li>
+				<li><a href="#"><div class="number">6</div><span>C++ Program to find Area of a Circle.</span></a></li>
+				<li><a href="#"><div class="number">7</div><span>C++ Program to find Reverse of a Number </span></a></li>
+			</ul>
+	</div>
+</section>
+<script>
+ 
+ function openNav() {
+
+  document.getElementById("side").style.width = "98%";
+  document.getElementById("side").style.position = 'absolute' ;
+  document.getElementById("side").style.zIndex = 1;
+  document.getElementById("side").style.background = 'white';
+  document.getElementById("side").style.display = 'block' ;
+}
+
+function closeNav() {
+  document.getElementById("side").style.width = "0";
+  document.getElementById("side").style.display = 'none' ;
+}
+
+
+
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+function allprogram() {
+  // Declare variables
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("all-search");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myProgram");
+  li = ul.getElementsByTagName("li");
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>
